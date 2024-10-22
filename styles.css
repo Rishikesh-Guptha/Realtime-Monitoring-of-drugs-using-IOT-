@@ -37,6 +37,7 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     width: 150px;
+    height: 175px;
 }
 
 h2 {
@@ -58,15 +59,6 @@ p {
     display: flex;
     justify-content: start;
 }
-
-
-/* .medicine-info {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #e9ecef; 
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
 
 .medicine-info h2 {
     color: #333; /* Darker color for better visibility */
