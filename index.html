@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Time Monitoring System</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,18 +15,20 @@
                     <h2>Temperature</h2>
                     <p id="temperature">Loading...</p>
                     <p class="unit">°C</p>
+                    <p id="tempWarning"></p> 
                 </div>
                 <div class="data">
                     <h2>Humidity</h2>
                     <p id="humidity">Loading...</p>
                     <p class="unit">%</p>
+                    <p id="humidityWarning"></p> 
                 </div>
             </div>
             <br>
             <div class="medicine-info"></div>
                 <h2>Current Medicine:</h2>
                 <select id="medicineSelect" onchange="updateThreshold()">
-                    <option value="Medicine A" data-threshold-low="20" data-threshold-high="22" humidity-threshold-high="60"  humidity-threshold-low="30">Medicine A</option>
+                    <option value="Medicine A" data-threshold-low="20" data-threshold-high="24" humidity-threshold-high="60"  humidity-threshold-low="30">Medicine A</option>
                     <option value="Medicine B" data-threshold-low="24" data-threshold-high="28" humidity-threshold-high="60"  humidity-threshold-low="30">Medicine B</option>
                     <option value="Medicine C" data-threshold-low="21" data-threshold-high="26" humidity-threshold-high="60"  humidity-threshold-low="30">Medicine C</option>
                     <!-- Add more medicines as needed -->
