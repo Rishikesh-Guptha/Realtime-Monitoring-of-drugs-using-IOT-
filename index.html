@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Real-Time Drug Monitoring System</h1>
+        <div class="container">
+            <div class="monitoring">
+                <div class="data">
+                    <h2>Temperature</h2>
+                    <p id="temperature">Loading...</p>
+                    <p class="unit">°C</p>
+                </div>
+                <div class="data">
+                    <h2>Humidity</h2>
+                    <p id="humidity">Loading...</p>
+                    <p class="unit">%</p>
+                </div>
+            </div>
+            <br>
+            <div class="medicine-info"></div>
+                <h2>Current Medicine:</h2>
+                <select id="medicineSelect" onchange="updateThreshold()">
+                    <option value="Medicine A" data-threshold-low="20" data-threshold-high="22" humidity-threshold-high="60"  humidity-threshold-low="30">Medicine A</option>
+                    <option value="Medicine B" data-threshold-low="24" data-threshold-high="28" humidity-threshold-high="60"  humidity-threshold-low="30">Medicine B</option>
+                    <option value="Medicine C" data-threshold-low="21" data-threshold-high="26" humidity-threshold-high="60"  humidity-threshold-low="30">Medicine C</option>
+                    <!-- Add more medicines as needed -->
+                </select>
+                <p id="thresholdRange">Threshold Range: <span id="thresholdLow">Loading...</span>°C to <span id="thresholdHigh">Loading...</span>°C</p>
+                <p id="humidityRange">Humidity Range: <span id="humidityLow">Loading...</span>% to <span id="humidityHigh">Loading...</span>%</p>
+                <br>
+                <a href="./rfid_tracker.html" class="button">Track Transport Location</a>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

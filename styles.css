@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.monitoring {
+    display: flex;
+    justify-content: space-around;
+}
+
+.data {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #007bff;
+}
+
+p {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.unit {
+    font-size: 16px;
+    color: #888;
+}
+
+.main h1 {
+    display: flex;
+    justify-content: start;
+}
+
+
+/* .medicine-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9ecef; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.medicine-info h2 {
+    color: #333; /* Darker color for better visibility */
+}
+
+#medicineSelect {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #007bff; /* Border color matching theme */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Spacing above dropdown */
+}
+
+#thresholdRange, #humidityRange {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555; /* Slightly darker for better readability */
+}
