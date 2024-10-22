@@ -20,13 +20,37 @@ const apiUrl = '';
 
 function fetchData() {
     const data = {
-        temperature: (Math.random() * 10 + 20).toFixed(2), //  temp between 20-30°C
+        temperature: (Math.random() * 10 + 18).toFixed(2), //  temp between 20-30°C
         humidity: (Math.random() * 20 + 40).toFixed(2) //  humidity between 50-70%
     };
 
-    
     document.getElementById('temperature').textContent = data.temperature;
     document.getElementById('humidity').textContent = data.humidity;
+
+
+             // Clear previous warnings
+             tempWarning.innerText = '';
+             humidityWarning.innerText = '';
+             
+            const thresholdLow=document.getElementById('thresholdLow').innerText;
+            const thresholdHigh=document.getElementById('thresholdHigh').innerText;
+
+            const humidityLow=document.getElementById('humidityLow').innerText;
+            const humidityHigh=document.getElementById('humidityHigh').innerText;
+             // Check temperature
+             if (data.temperature < thresholdLow || data.temperature > thresholdHigh) {
+                 tempWarning.innerText = '⚠️ Danger: Temperature out of range!';
+                 tempWarning.style.color = 'red';
+                 tempWarning.style.fontSize='12px' // Change text color to red for danger
+             }
+         
+             // Check humidity
+             if (data.humidity < humidityLow || data.humidity > humidityHigh) { // Assuming 30-60 is the safe range for humidity
+                 humidityWarning.innerText = '⚠️ Danger: Humidity out of range!';
+                 humidityWarning.style.color = 'red';
+                 humidityWarning.style.fontSize='12px' // Change text color to red for danger
+             }
+    
 }
 
 // Function to update threshold based on selected medicine
@@ -44,6 +68,10 @@ function updateThreshold() {
 
     document.getElementById('humidityLow').innerText = humidityLow;
     document.getElementById('humidityHigh').innerText = humidityHigh;
+
+    const temp=document.getElementById('temperature').textContent;
+    const humidity=document.getElementById('humidity').textContent;
+
 }
 
 // Fetch data every 1 second to simulate real-time updates
